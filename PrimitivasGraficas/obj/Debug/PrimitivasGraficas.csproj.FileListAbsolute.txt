@@ -1,0 +1,10 @@
+E:\PrimitivasGraficas\bin\Debug\PrimitivasGraficas.exe.config
+E:\PrimitivasGraficas\bin\Debug\PrimitivasGraficas.exe
+E:\PrimitivasGraficas\bin\Debug\PrimitivasGraficas.pdb
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csprojAssemblyReference.cache
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.fMain.resources
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.Properties.Resources.resources
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csproj.GenerateResource.cache
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csproj.CoreCompileInputs.cache
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.exe
+E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.pdb
