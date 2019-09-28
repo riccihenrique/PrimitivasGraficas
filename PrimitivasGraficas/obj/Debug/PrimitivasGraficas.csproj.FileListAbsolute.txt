@@ -8,3 +8,13 @@ E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csproj.GenerateResource.cache
 E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csproj.CoreCompileInputs.cache
 E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.exe
 E:\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.pdb
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\bin\Debug\PrimitivasGraficas.exe.config
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\bin\Debug\PrimitivasGraficas.exe
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\bin\Debug\PrimitivasGraficas.pdb
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csprojAssemblyReference.cache
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.fMain.resources
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.Properties.Resources.resources
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csproj.GenerateResource.cache
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.exe
+D:\Documentos\GitHub\PrimitivasGraficas\PrimitivasGraficas\obj\Debug\PrimitivasGraficas.pdb

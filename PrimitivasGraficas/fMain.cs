@@ -112,6 +112,11 @@ namespace PrimitivasGraficas
                     equacao_geral_circunf(pDown.X, pDown.Y, pOld.X, pOld.Y, branco);
                     equacao_geral_circunf(pDown.X, pDown.Y, e.X, e.Y, preto);
                 }
+                else if(rbTrigonometria.Checked)
+                {
+                    trigonometria_circ(pDown.X, pDown.Y, pOld.X, pOld.Y, branco);
+                    trigonometria_circ(pDown.X, pDown.Y, e.X, e.Y, preto);
+                }
                 else if (rbPontoMedioCirc.Checked)
                 {
                     ponto_medio_circunf(pDown.X, pDown.Y, pOld.X, pOld.Y, branco);
@@ -125,6 +130,27 @@ namespace PrimitivasGraficas
                 }
                 pOld = e.Location;
                 pbArea.Image = image;
+            }
+        }
+
+        private void trigonometria_circ(int x1, int y1, int x2, int y2, Color cor)
+        {
+            int raio = Math.Max(Math.Abs(x2 - x1), Math.Abs(y2 - y1));
+            double r = raio / Math.Sqrt(2);
+            double inc_angulo = r / 45.0, ang_inicioal = 90.0;
+            if (inc_angulo <= 0)
+                inc_angulo = 0.5;
+
+            if (inc_angulo > 1)
+                inc_angulo = 0.5;
+            double x, y;
+
+            while(ang_inicioal >= 45)
+            {
+                x = raio * Math.Cos(ang_inicioal * Math.PI / 180.0);
+                y = raio * Math.Sin(ang_inicioal * Math.PI / 180.0);
+                simetria((int) x,(int) y, x1, y1, cor);
+                ang_inicioal -= inc_angulo;
             }
         }
 
@@ -483,33 +509,28 @@ namespace PrimitivasGraficas
         }
         private void equacao_fundamental(int x1, int y1, int x2, int y2, Color c, bool f)
         {
-            int x0, y0;
             double m, y, x;
-            int i, ifim, inc;
+            int i, ifim, b;
 
             m = (x2 - x1);
             m = m == 0 ? 0 : (y2 - y1) / m;
+            b = (int) (y1 - m * x1);
 
-            int len = Math.Abs(x2 - x1);
-            if (Math.Abs(y2 - y1) > len)
-                len = Math.Abs(y2 - y1);
-
-            if (Math.Abs(x2 - x1) > Math.Abs(y2 - y1)) // BO aqui
+            if (Math.Abs(x2 - x1) > Math.Abs(y2 - y1))
             {
                 if (x1 < x2)
                 {
-                    i = x1; ifim = x2;
-                    x0 = x1;
+                    i = x1;
+                    ifim = x2;
                 }
                 else
                 {
-                    i = x2; ifim = x1;
-                    x0 = x2;
+                    i = x2;
+                    ifim = x1;
                 }
-                y0 = y1 < y2 ? y1 : y2;
                 for (; i <= ifim; i++)
                 {
-                    y = y0 + m * (i - x1);
+                    y = m * i + b;
                     image.SetPixel(i, (int)y, c);
                 }
             }
@@ -517,21 +538,20 @@ namespace PrimitivasGraficas
             {
                 if (y1 < y2)
                 {
-                    i = y1; ifim = y2;
-                    y0 = y1;
+                    i = y1;
+                    ifim = y2;
                 }
                 else
                 {
-                    i = y2; ifim = y1;
-                    y0 = y2;
+                    i = y2;
+                    ifim = y1;
                 }
-
-                x0 = x1 < x2 ? x1 : x2;
                 for (; i <= ifim; i++)
                 {
-                    x = x0 + (i - y1) / (m + 0.1);
-                    if (x < 0)
+                    if (m == 0)
                         x = 0;
+                    else
+                        x = (i - b) / m;
                     image.SetPixel((int)x, i, c);
                 }
             }
